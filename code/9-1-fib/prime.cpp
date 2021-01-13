@@ -2,7 +2,7 @@
 
 template <int N, int D>
 struct _is_prime {
-    static const bool result = (N % D) & _is_prime<N, D - 1>::result;
+    static const bool result = (N % D) && _is_prime<N, D - 1>::result;
 };
 template <int N>
 struct _is_prime<N, 2> {
@@ -24,9 +24,9 @@ struct is_prime<3> {
 
 int main() {
     std::cout << std::boolalpha;
-    std::cout << "Is prime ? :: " << is_prime<9>::result << std::endl;  // true
-    std::cout << "Is prime ? :: " << is_prime<10>::result << std::endl;  // false
-    
-    std::cout << "Is prime ? :: " << is_prime<11>::result << std::endl;  // true
-    std::cout << "Is prime ? :: " << is_prime<12>::result << std::endl;  // true
+    std::cout << "Is prime ? :: " << is_prime<2>::result << std::endl;  // true
+    std::cout << "Is prime ? :: " << is_prime<2049>::result << std::endl;  // false
+
+    std::cout << "Is prime ? :: " << is_prime<2000>::result << std::endl;  // true
+    std::cout << "Is prime ? :: " << is_prime<2000>::result << std::endl;  // true
 }
