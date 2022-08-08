@@ -1,5 +1,5 @@
 # study-cpp
+For studying C++
 
-## C++ 공부
-
-2021/01/06 ~ 
+* Duration : 2021-01-06 ~ 2021-01-27
+* Reference : [모두의 코드 - 씹어먹는 C++ 강좌](https://modoocode.com/135)
